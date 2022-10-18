@@ -1,0 +1,13 @@
+{%  extends 'base.html' %}
+{% block title %} list todo objects {% endblock %}
+{% block content %}
+{% for todo in todos %}
+  <h2>
+    <a href="{% url 'detail' todo.id %}">{{ todo.name }}</a>
+  </h2>
+  <p> Created {{ todo.created }} by {{ todo.user }}</p>
+
+  {{ todo.body|truncatewords:30|linebreaks }}
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %} {% endblock %}
+
+{% block content %}
+<h1>{{ todo.name }}</h1>
+<p>Created {{ todo.created }} by {{ todo.name }}</p>
+<p>{{ todo.body }}</p>
+<p>status : {{ todo.completed }}</p>
+<p><a href="{% url 'update' todo.id %}">update this todo </a></p>
+<p><a href="{% url 'create' %}"> create another todo</a></p>
+<p><a href="{% url 'delete' todo.id %}">delete this todo</a></p>
+{% endblock %}

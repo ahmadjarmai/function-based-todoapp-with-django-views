@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}update todo {% endblock %}
+{% block content %}
+<p>use the following form to update this post </p>
+<form method="post">
+  {{ form.as_p }}
+  {% csrf_token %}
+  <p><input type="submit" value="update"></p>
+</form>
+{% endblock %}

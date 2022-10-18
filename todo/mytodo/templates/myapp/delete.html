@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %} {% endblock %}
+{% block content %}
+<p>are you sure you want to delete this todo. </p>
+<form method="post">
+  <p><input type="submit" value="delete it"></p>
+  {% csrf_token%}
+</form>
+{% endblock %}
